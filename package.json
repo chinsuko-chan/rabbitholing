@@ -5,7 +5,7 @@
 	"description": "epic obsidian pluggin",
 	"main": "main.js",
 	"scripts": {
-		"dev": "node esbuild.config.js",
+		"start": "node esbuild.config.js",
 		"build": "node esbuild.config.js production",
 		"version": "node version-bump.js && git add manifest.json versions.json"
 	},
