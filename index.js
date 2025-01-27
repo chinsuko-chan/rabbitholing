@@ -21,6 +21,12 @@ export default class MyPlugin extends Plugin {
 		})
 		ribbonIconEl.addClass("my-plugin-ribbon-class")
 
+		this.addRibbonIcon("crosshair", "Print leaf types", () => {
+			this.app.workspace.iterateAllLeaves((leaf) => {
+				console.log(leaf.getViewState().type)
+			})
+		})
+
 		this.addSettingTab(new SampleSettingTab(this.app, this))
 	}
 
